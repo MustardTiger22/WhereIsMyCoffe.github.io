@@ -35,7 +35,6 @@ nav {
 @media screen and (max-width:725px) {
     section {
         display: block;
-        height: 80vh;
     }    
     #gallery-thumbnails {
         display: flex;

@@ -154,7 +154,7 @@ footer a:hover {
 @media screen and (max-width: 725px) {
     section {
         display: flex;
-        height: 80vh;
+        height: 100%;
         flex-direction: column;
     }    
 
