@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Watchdog.pl - Sekcja administracyjna</title>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/admin-style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="../scripts/jquery-3.4.1.min.js"></script>
+        <script src="../scripts/admin-utilities.js"></script>
+        <script src="../scripts/responsive-menu.js"></script>
+        
+    </head>
+    <body>
+        <nav>
+            <ul class="main-nav" id="topnav">
+                <li><h1 class="logo"><a href="../index.html">Watchdog.pl</a></h1></li>
+                <li><a href="../index.html">home</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="formularz.html">formularz</a></li>
+                <li><a href="administracja.html">Sekcja administracyjna</a></li>
+                <li><a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a></li>
+            </ul>
+        </nav>
+        <header>
+            <h2>Witaj na stronie Watchdog!</h2>
+            <label for="location">Szukaj piesków w lokalizacji: </label>
+            <input type="search" id="location" name="location" placeholder="np. Lublin" size="30">
+            <input type="button" value="Szukaj">
+        </header>
+        <section>
+            <div class="head-of-section">
+                Local storage
+            </div><br>
+            <div id="section-body">
+                <table id="table-localstorage">
+                    <thead>
+                        <tr>
+                            <th colspan="3">Właściciel</th>
+                            <th colspan="3">Pies</th> 
+                            <th rowspan="2">Coś o sobie</th>
+                            <th>Akcje</th>
+                        </tr>
+                        <tr>
+                            <th>Imię</th>
+                            <th>Nazwisko</th>
+                            <th>Adres email</th>
+                            <th>Imię</th>
+                            <th>Rasa</th>
+                            <th>Wiek</th>
+                            <th>Usuń</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+
+                    </tbody>
+                </table>
+                <div id="clear-storage">
+                    <button id="clear-local-storage" style="float:left;">Wyczyść LocalStorage</button>
+                </div>
+            </div>
+            
+        </section>
+        <footer>
+            <a href="https://www.linkedin.com/in/dominik-przytu%C5%82a-ba492517a/" target="_blank">
+                <h2>Copyright &copy; Dominik Przytuła</h2>
+            </a>
+        </footer>
+    </body>
+</html>

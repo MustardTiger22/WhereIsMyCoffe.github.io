@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Watchdog.pl - Strona główna</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap">
+        <link rel="stylesheet" href="../plugins/lightbox/src/css/lightbox.css">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	    <link rel="stylesheet" href="../plugins/Ideal-Image-Slider/ideal-image-slider.css">
+        <link rel="stylesheet" href="../plugins/Ideal-Image-Slider/themes/default/default.css">
+        <link rel="stylesheet" href="../css/gallery-style.css">
+        <script src="../scripts/responsive-menu.js"></script>
+        <script src="../scripts/jquery-3.4.1.min.js"></script>
+        <script src="../plugins/lightbox/src/js/lightbox.js"></script>
+        <script src="../plugins/Ideal-Image-Slider/ideal-image-slider.js"></script>
+    </head>
+    <body>
+        <nav>
+            <ul class="main-nav" id="topnav">
+                <li><h1 class="logo"><a href="../index.html">Watchdog.pl</a></h1></li>
+                <li><a href="../index.html">home</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="formularz.html">formularz</a></li>
+                <li><a href="administracja.html">Sekcja administracyjna</a></li>
+                <li><a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a></li>
+            </ul>
+        </nav>
+        <header>
+            <h2>Witaj na stronie Watchdog!</h2>
+            <label for="location">Szukaj piesków w lokalizacji: </label>
+            <input type="search" id="location" name="location" placeholder="np. Lublin" size="30">
+            <input type="button" value="Szukaj">
+        </header>
+        <section>
+            <div id="gallery-slider">
+                <div class="head-of-section">Galeria</div>
+                <div id="slideshow">
+                    <img data-src="../images/dogs-gallery/slider/1.jpg" src="" alt="image1" class="mySlides" />
+                    <img data-src="../images/dogs-gallery/slider/2.jpg" src="" alt="image2" class="mySlides" />
+                    <img data-src="../images/dogs-gallery/slider/3.jpg" src="" alt="image3" class="mySlides"/>
+                    <img data-src="../images/dogs-gallery/slider/4.jpg" src="" alt="image4" class="mySlides"/>
+                    <img data-src="../images/dogs-gallery/slider/5.jpg" src="" alt="image5" class="mySlides"/>
+                    <img data-src="../images/dogs-gallery/slider/6.jpg" src="" alt="image6" class="mySlides"/>
+                </div>
+            </div>
+                <br><hr class="hr-style">
+                <div id="gallery-thumbnails">
+                    <a href="../images/dogs-gallery/big/1.jpg" data-lightbox="dogs">
+                        <img src="../images/dogs-gallery/small/1.jpg" alt="img1">
+                    </a>
+                    <a href="../images/dogs-gallery/big/2.jpg" data-lightbox="dogs">
+                        <img src="../images/dogs-gallery/small/2.jpg" alt="img2">
+                    </a>
+                    <a href="../images/dogs-gallery/big/3.jpg" data-lightbox="dogs">
+                        <img src="../images/dogs-gallery/small/3.jpg" alt="img3">
+                    </a>
+                    <a href="../images/dogs-gallery/big/4.jpg" data-lightbox="dogs">
+                        <img src="../images/dogs-gallery/small/4.jpg" alt="img4">
+                    </a>
+                    <a href="../images/dogs-gallery/big/5.jpg" data-lightbox="dogs">
+                        <img src="../images/dogs-gallery/small/5.jpg" alt="img5">
+                    </a>
+                    <a href="../images/dogs-gallery/big/6.jpg" data-lightbox="dogs">
+                        <img src="../images/dogs-gallery/small/6.jpg" alt="img6">
+                    </a>
+                    <a href="../images/dogs-gallery/big/7.jpg" data-lightbox="dogs">
+                        <img src="../images/dogs-gallery/small/7.jpg" alt="img7">
+                    </a>
+                    <a href="../images/dogs-gallery/big/8.jpg" data-lightbox="dogs">
+                        <img src="../images/dogs-gallery/small/8.jpg" alt="img8">
+                    </a>
+                </div>
+        </section>
+        <footer>
+            <a href="https://www.linkedin.com/in/dominik-przytu%C5%82a-ba492517a/" target="_blank">
+                <h2>Copyright &copy; Dominik Przytuła</h2>
+            </a>
+        </footer>
+
+        <script>
+            var slider = new IdealImageSlider.Slider('#slideshow');
+            slider.start();
+        </script>
+    </body>
+</html>
