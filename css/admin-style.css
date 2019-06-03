@@ -44,9 +44,6 @@
 }
   
 @media screen and (max-width: 840px) {
-  section {
-    height: 70vh;
-  }
   #table-localstorage {
     border: 0;
   }
@@ -88,5 +85,12 @@
   
   #table-localstorage td:last-child {
     border-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 725px) {
+  section {
+    display: table;
+    height: 76vh;
   }
 }
