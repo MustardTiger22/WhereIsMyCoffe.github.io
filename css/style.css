@@ -81,6 +81,7 @@ header {
     font-weight: bold;
     margin-bottom: 2%;
     font-size: 1.6em;
+    word-wrap: break-word;
     width: 100%;
 }
 
@@ -89,7 +90,6 @@ section {
     padding: 50px;
     height: 70vh;
     background: #f9d588;
-    overflow: scroll;
     display: table;
 }
 /* </Section */
