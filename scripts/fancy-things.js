@@ -25,7 +25,7 @@ function topFunction() {
     document.documentElement.scrollTop = 0; 
 }
 
-var txt = 'Jesteśmy wolontariuszami pod patronatem grupy "Good Boy", którzy ';
+var txt = 'Jesteśmy wolontariuszami w schronisku dla bezdomnych psów w Lublinie od 2010 roku. Utworzyliśmy tą stronę w celu zautomatyzowania oraz ułatwienia wykonania pierwszego kroku w kierunku ich adopcji.';
 var speed = 50; 
 var i=0;
 
@@ -36,3 +36,14 @@ function typeWriter() {
         setTimeout(typeWriter, speed);
     }
 }
+
+function mySnackbar() {
+    // Get the snackbar DIV
+    var x = document.getElementById("snackbar");
+  
+    // Add the "show" class to DIV
+    x.className = "show";
+  
+    // After 3 seconds, remove the show class from DIV
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+  }

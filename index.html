@@ -6,8 +6,9 @@
         
         <title>Watchdog.pl - Strona główna</title>
         <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="plugins/font-awesome/css/all.css">
+        <link type="text/css" rel="stylesheet" href="css/style.css">
+        <link type="text/css" rel="stylesheet" href="css/home-style.css">
+        <link type="text/css" rel="stylesheet" href="plugins/font-awesome/css/all.css">
         <script src="scripts/jquery-3.4.1.min.js"></script>
         <script src="scripts/fancy-things.js"></script>
         <script src="scripts/responsive-menu.js"></script>
@@ -24,14 +25,16 @@
             </ul>
         </nav>
         <header>
-            <h2>Witaj na stronie Watchdog!</h2>
-            <label for="location">Szukaj piesków w lokalizacji: </label>
-            <input type="search" id="location" name="location" placeholder="np. Lublin" size="30">
-            <input type="button" value="Szukaj">
+            <h2>Witaj na stronie Watchdog.pl!</h2>
+            <div class="search-container">
+                <label for="location">Szukaj piesków w lokalizacji: </label>
+                <input type="text" id="location" name="location" placeholder="np. Lublin" size="30">
+                <button onclick="mySnackbar()" class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
         </header>
         <section>
             <div class="head-of-section">
-            Wybierz psa, którego chciałbyś/chciałabyś wyprowadzić.
+                <h3>Wybierz psa, którego chciałbyś/chciałabyś wyprowadzić.</h3>
             </div>
             <div class="card-container">
                 <div class="card">
@@ -135,6 +138,7 @@
                 </div>
             </div>
             </div>
+            </div>
         </article>
         <footer>
             <a href="https://www.linkedin.com/in/dominik-przytu%C5%82a-ba492517a/" target="_blank">
@@ -143,6 +147,7 @@
         </footer>
 
         <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-circle-up"></i></button>
-        <img id="cursor-icon" src="images/cursor-icon.png">
+        <img id="cursor-icon" src="images/cursor-icon.png" alt="cursor">
+        <div id="snackbar">Funkcja aktualnie niedostępna.</div>
     </body>
 </html>

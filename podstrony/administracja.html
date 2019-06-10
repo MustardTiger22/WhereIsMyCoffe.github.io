@@ -6,9 +6,9 @@
         
         <title>Watchdog.pl - Sekcja administracyjna</title>
         <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="../plugins/font-awesome/css/all.css">
-        <link rel="stylesheet" href="../css/style.css">
-        <link rel="stylesheet" href="../css/admin-style.css">
+        <link type="text/css" rel="stylesheet" href="../plugins/font-awesome/css/all.css">
+        <link type="text/css" rel="stylesheet" href="../css/style.css">
+        <link type="text/css" rel="stylesheet" href="../css/admin-style.css">
         <script src="../scripts/jquery-3.4.1.min.js"></script>
         <script src="../scripts/admin-utilities.js"></script>
         <script src="../scripts/fancy-things.js"></script>
@@ -23,18 +23,20 @@
                 <li><a href="galeria.html">Galeria</a></li>
                 <li><a href="formularz.html">formularz</a></li>
                 <li><a href="administracja.html">Sekcja administracyjna</a></li>
-                <li><a href="javascript:void(0);" class="icon" onclick="navigation()"><i class="fa fa-bars"></i></a></li>
+                <li><a href="javascript:void(0);" class="icon" onclick="navigation()"><i class="fa fa-bars" style="font-size: 2em;"></i></a></li>
             </ul>
         </nav>
         <header>
             <h2>Witaj na stronie Watchdog!</h2>
-            <label for="location">Szukaj piesków w lokalizacji: </label>
-            <input type="search" id="location" name="location" placeholder="np. Lublin" size="30">
-            <input type="button" value="Szukaj">
+            <div class="search-container">
+                <label for="location">Szukaj piesków w lokalizacji: </label>
+                <input type="text" id="location" name="location" placeholder="np. Lublin" size="30">
+                <button onclick="mySnackbar()" class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
         </header>
         <section>
             <div class="head-of-section">
-                Local storage
+                <h3>Local storage</h3>
             </div><br>
             <div id="section-body">
                 <table id="table-localstorage">
@@ -72,6 +74,7 @@
             </a>
         </footer>
         <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-circle-up"></i></button>
-        <img id="cursor-icon" src="../images/cursor-icon.png">
+        <img id="cursor-icon" src="../images/cursor-icon.png" alt="cursor">
+        <div id="snackbar">Funkcja aktualnie niedostępna.</div>
     </body>
 </html>

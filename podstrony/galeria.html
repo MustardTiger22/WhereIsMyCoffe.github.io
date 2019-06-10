@@ -6,12 +6,12 @@
         
         <title>Watchdog.pl - Strona główna</title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap">
-        <link rel="stylesheet" href="../plugins/lightbox/src/css/lightbox.css">
-        <link rel="stylesheet" href="../css/style.css">
-        <link rel="stylesheet" href="../plugins/font-awesome/css/all.css">
-	    <link rel="stylesheet" href="../plugins/Ideal-Image-Slider/ideal-image-slider.css">
-        <link rel="stylesheet" href="../plugins/Ideal-Image-Slider/themes/default/default.css">
-        <link rel="stylesheet" href="../css/gallery-style.css">
+        <link type="text/css" rel="stylesheet" href="../plugins/lightbox/src/css/lightbox.css">
+        <link type="text/css" rel="stylesheet" href="../css/style.css">
+        <link type="text/css" rel="stylesheet" href="../plugins/font-awesome/css/all.css">
+	    <link type="text/css" rel="stylesheet" href="../plugins/Ideal-Image-Slider/ideal-image-slider.css">
+        <link type="text/css" rel="stylesheet" href="../plugins/Ideal-Image-Slider/themes/default/default.css">
+        <link type="text/css" rel="stylesheet" href="../css/gallery-style.css">
         <script src="../scripts/jquery-3.4.1.min.js"></script>
         <script src="../scripts/responsive-menu.js"></script>
         <script src="../scripts/fancy-things.js"></script>
@@ -26,25 +26,27 @@
                 <li><a href="galeria.html">Galeria</a></li>
                 <li><a href="formularz.html">formularz</a></li>
                 <li><a href="administracja.html">Sekcja administracyjna</a></li>
-                <li><a href="javascript:void(0);" class="icon" onclick="navigation()"><i class="fa fa-bars"></i></a></li>
+                <li><a href="javascript:void(0);" class="icon" onclick="navigation()"><i class="fa fa-bars" style="font-size: 2em;"></i></a></li>
             </ul>
         </nav>
         <header>
             <h2>Witaj na stronie Watchdog!</h2>
-            <label for="location">Szukaj piesków w lokalizacji: </label>
-            <input type="search" id="location" name="location" placeholder="np. Lublin" size="30">
-            <input type="button" value="Szukaj">
+            <div class="search-container">
+                <label for="location">Szukaj piesków w lokalizacji: </label>
+                <input type="text" id="location" name="location" placeholder="np. Lublin" size="30">
+                <button onclick="mySnackbar()" class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
         </header>
         <section>
             <div id="gallery-slider">
-                <div class="head-of-section">Galeria</div>
+                <div class="head-of-section"><h3>Galeria</h3></div>
                 <div id="slideshow">
-                    <img data-src="../images/dogs-gallery/slider/1.jpg" src="" alt="image1" class="mySlides" />
-                    <img data-src="../images/dogs-gallery/slider/2.jpg" src="" alt="image2" class="mySlides" />
-                    <img data-src="../images/dogs-gallery/slider/3.jpg" src="" alt="image3" class="mySlides"/>
-                    <img data-src="../images/dogs-gallery/slider/4.jpg" src="" alt="image4" class="mySlides"/>
-                    <img data-src="../images/dogs-gallery/slider/5.jpg" src="" alt="image5" class="mySlides"/>
-                    <img data-src="../images/dogs-gallery/slider/6.jpg" src="" alt="image6" class="mySlides"/>
+                    <img data-src="../images/dogs-gallery/slider/1.jpg" src="#" alt="image1" class="mySlides" />
+                    <img data-src="../images/dogs-gallery/slider/2.jpg" src="#" alt="image2" class="mySlides" />
+                    <img data-src="../images/dogs-gallery/slider/3.jpg" src="#" alt="image3" class="mySlides"/>
+                    <img data-src="../images/dogs-gallery/slider/4.jpg" src="#" alt="image4" class="mySlides"/>
+                    <img data-src="../images/dogs-gallery/slider/5.jpg" src="#" alt="image5" class="mySlides"/>
+                    <img data-src="../images/dogs-gallery/slider/6.jpg" src="#" alt="image6" class="mySlides"/>
                 </div>
             </div>
                 <br><hr class="hr-style">
@@ -85,6 +87,7 @@
             slider.start();
         </script>
         <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-circle-up"></i></button>
-        <img id="cursor-icon" src="../images/cursor-icon.png">
+        <img id="cursor-icon" src="../images/cursor-icon.png" alt="cursor">
+        <div id="snackbar">Funkcja aktualnie niedostępna.</div>
     </body>
 </html>
