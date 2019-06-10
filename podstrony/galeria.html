@@ -8,12 +8,13 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap">
         <link rel="stylesheet" href="../plugins/lightbox/src/css/lightbox.css">
         <link rel="stylesheet" href="../css/style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../plugins/font-awesome/css/all.css">
 	    <link rel="stylesheet" href="../plugins/Ideal-Image-Slider/ideal-image-slider.css">
         <link rel="stylesheet" href="../plugins/Ideal-Image-Slider/themes/default/default.css">
         <link rel="stylesheet" href="../css/gallery-style.css">
-        <script src="../scripts/responsive-menu.js"></script>
         <script src="../scripts/jquery-3.4.1.min.js"></script>
+        <script src="../scripts/responsive-menu.js"></script>
+        <script src="../scripts/fancy-things.js"></script>
         <script src="../plugins/lightbox/src/js/lightbox.js"></script>
         <script src="../plugins/Ideal-Image-Slider/ideal-image-slider.js"></script>
     </head>
@@ -25,7 +26,7 @@
                 <li><a href="galeria.html">Galeria</a></li>
                 <li><a href="formularz.html">formularz</a></li>
                 <li><a href="administracja.html">Sekcja administracyjna</a></li>
-                <li><a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a></li>
+                <li><a href="javascript:void(0);" class="icon" onclick="navigation()"><i class="fa fa-bars"></i></a></li>
             </ul>
         </nav>
         <header>
@@ -79,10 +80,11 @@
                 <h2>Copyright &copy; Dominik Przytuła</h2>
             </a>
         </footer>
-
         <script>
             var slider = new IdealImageSlider.Slider('#slideshow');
             slider.start();
         </script>
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-circle-up"></i></button>
+        <img id="cursor-icon" src="../images/cursor-icon.png">
     </body>
 </html>

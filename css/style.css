@@ -22,6 +22,7 @@ ul {
 
 /* <Navigation> */
 nav {
+    z-index: 100;
     position: sticky;
     position: -webkit-sticky;
     top: 0px;
@@ -66,13 +67,13 @@ nav {
 
 .main-nav li .icon {
     display: none;
-  }
-
+}
 /* </Navigation> */
 
 /* <Header> */
 header {
     padding: 50px;
+    transition: 0.2s;
     background: #de950f;
 }
 /* </Header> */
@@ -134,6 +135,23 @@ section {
     font-weight: bold;
     color: #fff;
 }
+.card:hover {
+    animation: shake 0.5s; 
+    animation-iteration-count: infinite; 
+}
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
 /* /Dog card */
 
 /* <Footer> */
@@ -142,6 +160,7 @@ footer {
     padding: 50px;
     width: 100%;
     background: #de950f;
+    transition: 0.2s;
 }
 footer a {
     color: black;
@@ -150,6 +169,154 @@ footer a:hover {
     color: #e4e1e1;
 }
 /* </Footer> */
+
+#cursor-icon {
+    position: absolute;
+    float: left;
+    z-index: 100;
+}
+
+/* Article */
+article {
+    background: #edc16e;
+    text-align: center;
+    border-top: 5px dotted #794f01;
+}
+.max-section-width {
+    max-width: 1600px;
+    margin:auto;
+    padding: 50px;
+}
+#dog-article-img {
+    border-radius: 50%;
+    border: 15px solid #fff;
+}
+#who-we-are {
+    font-size: 1.5em;
+}
+#who-we-are:hover {
+    cursor: pointer;
+    color: #5e5d34;
+}
+
+#myBtn {
+    display: none; 
+    position: fixed; 
+    background-color: Transparent;
+    outline:none;
+    bottom: 20px; 
+    right: 30px; 
+    z-index: 99; 
+    border: none; 
+    cursor: pointer; 
+    font-size: 3em;
+}
+#myBtn:hover {
+    color: #655539;
+}
+/* \Article */
+
+/* Card with icons */
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 5px;
+}
+
+.row {margin: 50px -5px;}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.card-social {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.379);
+    color: rgba(0, 0, 0, 0.625);
+    word-break: break-all;
+}
+
+.fa {font-size:50px;}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+/* \Card with icons */
+
+/* Flipbox */
+.flip-box {
+    margin: auto;
+    background-color: Transparent;
+    width: 100%;
+    max-width: 400px;
+    height: 200px;
+    perspective: 1000px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    overflow: auto;
+}
+
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+    transform: rotateX(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-box-front {
+    background-color: rgba(255, 255, 255, 0.379);
+    color: rgba(0, 0, 0, 0.625);
+    padding: 45px;
+    cursor: grab;
+}
+
+.flip-box-front i{
+    font-weight: bolder;
+    font-size: 6em;
+}
+
+.flip-box-title{
+    font-weight: bolder;
+    font-size: 1.4em;
+}
+
+.flip-box-back {
+    background-color: rgba(255, 255, 255, 0.379);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    transform: rotateX(180deg);
+    padding: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .flip-box-front i{
+        font-weight: bolder;
+        font-size: 5em;
+    }
+}
+
+/* \Flipbox */
+
 
 
 /* RWD */
@@ -162,10 +329,16 @@ footer a:hover {
 
     header {
         padding: 25px;
+        transition: 0.2s;
     }
 
     footer {
         padding: 25px;
+        transition: 0.2s;
+    }
+
+    .card {
+        height: 200px;
     }
 
     /* Nawigacja */
@@ -176,21 +349,29 @@ footer a:hover {
         display: none;
     }
     .main-nav li > a.icon {
-    position: absolute;
-      right: 0;
-      top: 13px;
-      float: right;
-      display: block;
+        position: absolute;
+        right: 0;
+        top: 13px;
+        float: right;
+        display: block;
     }
     .main-nav.responsive {
         position: relative;
     }
     .main-nav.responsive li > a.icon {
-      top: 0;
+        top: 0;
     }
     .main-nav.responsive li > a {
-      float: none;
-      display: block;
-      text-align: center;
+        float: none;
+        display: block;
+        text-align: center;
+    }
+    #cursor-icon {
+        display: none;
+    }
+    #dog-article-img {
+        max-width: 350px;
+        width: 100%;
     }
 }
+

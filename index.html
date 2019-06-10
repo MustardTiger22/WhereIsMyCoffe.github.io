@@ -7,7 +7,9 @@
         <title>Watchdog.pl - Strona główna</title>
         <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="plugins/font-awesome/css/all.css">
+        <script src="scripts/jquery-3.4.1.min.js"></script>
+        <script src="scripts/fancy-things.js"></script>
         <script src="scripts/responsive-menu.js"></script>
     </head>
     <body>
@@ -18,7 +20,7 @@
                 <li><a href="podstrony/galeria.html">Galeria</a></li>
                 <li><a href="podstrony/formularz.html">formularz</a></li>
                 <li><a href="podstrony/administracja.html">Sekcja administracyjna</a></li>
-                <li><a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a></li>
+                <li><a href="javascript:void(0);" class="icon" onclick="navigation()"><i class="fa fa-bars" style="font-size: 2em;"></i></a></li>
             </ul>
         </nav>
         <header>
@@ -71,17 +73,78 @@
                 
                 <div class="card">
                     <div class="card-image">
-                            <a href="podstrony/formularz.html"><img src="images/homepage/nowyPies.jpg" alt="nowyPies"></a>
+                        <a href="podstrony/formularz.html"><img src="images/homepage/nowyPies.jpg" alt="nowyPies"></a>
                     </div>
                     <div class="card-label">Dodaj swojego psa!</div>
                 </div>
                 
             </div>
         </section>
+        <article>
+            <div class="max-section-width">
+            <img src="images/dog-article.jpg" alt="dog-article" id="dog-article-img"/><br>
+            <span onclick="typeWriter()" id="who-we-are">Kim jesteśmy? &darr;</span>
+            <p id="typing-effect"></p>
+
+            <div class="row">
+                <div class="column">
+                    <div class="card-social">
+                        <p><i class="fa fa-user"></i></p>
+                        <h3>11+</h3>
+                        <p>Partnerzy</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card-social">
+                        <p><i class="fa fa-smile"></i></p>
+                        <h3>300+</h3>
+                        <p>Zaufało nam</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card-social">
+                        <p><i class="fa fa-dog"></i></p>
+                        <h3>55+</h3>
+                        <p>Piesków w bazie</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card-social">
+                        <p><i class="fa fa-bone"></i></p>
+                        <h3>300kg+</h3>
+                        <p>Tyle karmy zebraliśmy</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <div class="center">
+                            <p><i class="fas fa-address-card"></i></p>
+                            <span class="flip-box-title">Kontakt</span>
+                        </div>
+                    </div>
+                <div class="flip-box-back">
+                    <h3>Watchdog POLSKA</h3>
+                    <p>
+                        Piłsudzkiego 14/14<br>
+                        20-003 Lublin<br>
+                        tel: 123-123-123<br>
+                        email: help@watchdog.pl
+                    </p>
+                </div>
+            </div>
+            </div>
+        </article>
         <footer>
             <a href="https://www.linkedin.com/in/dominik-przytu%C5%82a-ba492517a/" target="_blank">
                 <h2>Copyright &copy; Dominik Przytuła</h2>
             </a>
         </footer>
+
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-circle-up"></i></button>
+        
+        <img id="cursor-icon" src="images/cursor-icon.png">
+
     </body>
 </html>

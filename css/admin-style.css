@@ -1,49 +1,75 @@
+#section-body {
+  max-width: 2048px;
+  margin: auto;
+}
+
 #table-localstorage {
-    border: 1px solid #ccc;
-    border-collapse: collapse;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    table-layout: fixed;
-  }
-  
-  #table-localstorage caption {
-    font-size: 1.5em;
-    margin: .5em 0 .75em;
-  }
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
 
-  #table-localstorage tr {
-    background-color: #f8f8f8;
-    border: 1px solid #ddd;
-    padding: .35em;
-  }
-  
-  #table-localstorage th,
-  #table-localstorage td {
-    padding: .625em;
-    text-align: center;
-    word-wrap: break-word;
-  }
-  
-  #table-localstorage th {
-    font-size: .85em;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-  }
+#table-localstorage caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
 
-  #section-body button {
-    padding: 16px 18px;
-    background: #039a76;
-    border-radius: 2px;
-    text-transform: uppercase;
-    border: 0;
+#table-localstorage tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+#table-localstorage th,
+#table-localstorage td {
+  padding: .625em;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+#table-localstorage th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+#section-body button {
+  padding: 16px 18px;
+  background: #039a76;
+  border-radius: 2px;
+  text-transform: uppercase;
+  border: 0;
+}
+
+#table-localstorage textarea {
+  resize: none;
 }
 
 #clear-storage {
-    margin-top: 5px;
+  margin-top: 5px;
 }
-  
-@media screen and (max-width: 840px) {
+
+/* Modify row css */
+
+#table-localstorage input,
+#table-localstorage textarea,
+#table-localstorage select {
+    font-size: .85em;
+    padding: 8px;
+    width: 100%;
+    border: 0;
+}
+
+.warning {
+  border: 2px solid #b82a3fd2 !important;
+  /* background: #de1d30b5; */
+}
+/* \Modify row css */
+
+@media screen and (max-width: 1110px) {
   #table-localstorage {
     border: 0;
   }
@@ -51,7 +77,7 @@
   #table-localstorage caption {
     font-size: 1.3em;
   }
-  
+
   #table-localstorage thead {
     border: none;
     clip: rect(0, 0, 0, 0);
@@ -62,35 +88,48 @@
     position: absolute;
     width: 1px;
   }
-  
+
   #table-localstorage tr {
     border-bottom: 3px solid #ddd;
     display: block;
     margin-bottom: .625em;
   }
-  
+
   #table-localstorage td {
     border-bottom: 1px solid #ddd;
     display: block;
     font-size: .8em;
     text-align: right;
   }
-  
+
   #table-localstorage td::before {
     content: attr(data-label);
     float: left;
     font-weight: bold;
     text-transform: uppercase;
   }
-  
+
   #table-localstorage td:last-child {
     border-bottom: 0;
   }
-}
 
+  #table-localstorage input,
+  #table-localstorage textarea,
+  #table-localstorage select {
+      width: 60%;
+      text-align: right;
+  }
+
+  #table-localstorage select > option {
+    text-align: right;
+    text-align-last: right;
+  }
+}
 @media screen and (max-width: 725px) {
   section {
     display: table;
     height: 76vh;
   }
 }
+
+

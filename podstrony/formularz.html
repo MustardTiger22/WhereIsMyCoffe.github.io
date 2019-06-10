@@ -8,9 +8,10 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="../css/form-style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../plugins/font-awesome/css/all.css">
         <script src="../scripts/jquery-3.4.1.min.js"></script>
         <script src="../scripts/form-validation.js"></script>
+        <script src="../scripts/fancy-things.js"></script>
         <script src="../scripts/responsive-menu.js"></script>
         
     </head>
@@ -22,7 +23,7 @@
                 <li><a href="galeria.html">Galeria</a></li>
                 <li><a href="formularz.html">formularz</a></li>
                 <li><a href="administracja.html">Sekcja administracyjna</a></li>
-                <li><a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a></li>
+                <li><a href="javascript:void(0);" class="icon" onclick="navigation()"><i class="fa fa-bars"></i></a></li>
             </ul>
         </nav>
         <header>
@@ -116,5 +117,7 @@
                 <h2>Copyright &copy; Dominik Przytuła</h2>
             </a>
         </footer>
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-circle-up"></i></button>
+        <img id="cursor-icon" src="../images/cursor-icon.png">
     </body>
 </html>
