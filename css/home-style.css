@@ -184,10 +184,6 @@ article {
     .card {
         height: 200px;
     }
-
-    #cursor-icon {
-        display: none;
-    }
     #dog-article-img {
         max-width: 350px;
         width: 100%;

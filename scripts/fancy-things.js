@@ -13,10 +13,10 @@ window.onscroll = function() {
 };
 
 function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("myBtn").style.display = "block";
+    if ($('html').scrollTop() > 20 || $('html').scrollTop() > 20) {
+        $("#myBtn").show();
     } else {
-        document.getElementById("myBtn").style.display = "none";
+        $("#myBtn").hide();
     }
 }
   
@@ -25,7 +25,7 @@ function topFunction() {
     document.documentElement.scrollTop = 0; 
 }
 
-var txt = 'Jesteśmy wolontariuszami w schronisku dla bezdomnych psów w Lublinie od 2010 roku. Utworzyliśmy tą stronę w celu zautomatyzowania oraz ułatwienia wykonania pierwszego kroku w kierunku ich adopcji.';
+var txt = 'Jesteśmy wolontariuszami w schronisku dla bezdomnych psów w Lublinie od 2010 roku. Utworzyliśmy tę stronę w celu zautomatyzowania oraz ułatwienia wykonania pierwszego kroku w kierunku ich adopcji.';
 var speed = 50; 
 var i=0;
 
@@ -38,12 +38,7 @@ function typeWriter() {
 }
 
 function mySnackbar() {
-    // Get the snackbar DIV
-    var x = document.getElementById("snackbar");
-  
-    // Add the "show" class to DIV
-    x.className = "show";
-  
-    // After 3 seconds, remove the show class from DIV
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+    var x = $("#snackbar");
+    x.addClass("show");
+    setTimeout(function(){ x.removeClass("show"); }, 3000);
   }
